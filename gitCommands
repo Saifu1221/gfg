@@ -1,7 +1,15 @@
+$ git config --global user.name "John Doe"
+$ git config --global user.email johndoe@example.com
+
 git remote add origin https://github.com/Saifu1221/gfg.gi
 
-git remote set-url origin https://github.com/github/ReactiveCocoa.git
 # Change the 'origin' remote's URL
+
+git remote set-url origin https://github.com/github/ReactiveCocoa.git
+
+git push -u origin master
+
+
 
 e12fd3e1fb2a614331586f4893466ef9acafd309
 
