@@ -45,3 +45,7 @@ int search(char a[], int, int, int);
 
 //Double tree
 void doubleTree(struct tree *);
+
+void boundaryTraversal(struct tree *);
+
+void printLeavNodes(struct tree *);

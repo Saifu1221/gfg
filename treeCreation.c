@@ -121,14 +121,25 @@ int main()
         printf("\nBoth tree are identical");
     else
         printf("\nTrees are not identical");
-	
-	
-	
+	printf("\nBoundry traversal of tree :\n");
+	struct tree *root5 = newNode(20);
+    root5->lc = newNode(8);
+    root5->lc->lc = newNode(4);
+    root5->lc->rc = newNode(12);
+    root5->lc->rc->lc = newNode(10);
+    root5->lc->rc->rc  = newNode(14);
+    root5->rc = newNode(22);
+    root5->rc->rc = newNode(25);
+	boundaryTraversal(root5);
+	getchar();
 	deleteTree(root1);
 	deleteTree(root2);
+	deleteTree(root3);
+	deleteTree(root4);
+	deleteTree(root5);
 	printf("\n");
 	
  
-    getchar();
+    
   return 0;
 }

@@ -90,7 +90,7 @@ void deleteTree(struct tree *node){
 		return;
 	deleteTree(node->lc);
 	deleteTree(node->rc);
-	printf("\nDeleting node: %d", node->data);
+	//printf("\nDeleting node: %d", node->data);
 	free(node);
 	
 }
@@ -198,4 +198,39 @@ void doubleTree(struct tree *node){
 		temp->lc = t;
 	}
 		
+}
+
+
+void printLeafNodes(struct tree *node){
+	if(node == NULL)
+		return;
+	if(node->lc == NULL && node->rc == NULL)
+		printf("%d ",node->data);
+		printLeafNodes(node->lc);
+		printLeafNodes(node->rc);
+}
+
+void boundaryTraversal(struct tree *node){
+	
+	//printing left boundaries
+	struct tree *temp1 =node;
+
+	//struct tree *temp2 =node;
+
+	while(temp1){
+		if(temp1->lc != NULL || temp1->rc != NULL)
+			printf("%d ",temp1->data);
+		temp1 = temp1->lc;
+	}
+	//printing leaves
+	printLeafNodes(node);
+	
+//printing right boundaries
+struct tree *temp2 =node->rc;
+	while(temp2){
+		if(temp2->lc != NULL || temp2->rc != NULL)// && temp2 != node) 
+			printf("%d ",temp2->data);
+		temp2 = temp2->rc;
+	}
+	
 }
