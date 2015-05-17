@@ -3,7 +3,7 @@ $ git config --global user.name "John Doe"
 $ git config --global user.email johndoe@example.com
 
 Creating and switching to the branch:
- git branch -b branchName
+ git checkout -b branchName
 
 git remote add origin https://github.com/Saifu1221/gfg.gi
 
